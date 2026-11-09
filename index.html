@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>Семейное дерево</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="title"><span class="mark">FT</span><div><h1>Семейное дерево</h1><p id="counts">Загрузка…</p></div></div>
+    <div class="tools">
+      <label class="search"><span class="visually-hidden">Найти человека</span><input id="search" type="search" placeholder="Найти человека…" autocomplete="off"></label>
+      <button id="root" type="button">К Емельяну</button>
+      <button id="fit" type="button">Всё дерево</button>
+      <button id="minus" type="button" aria-label="Уменьшить">−</button>
+      <span id="zoom" aria-live="polite">100%</span>
+      <button id="plus" type="button" aria-label="Увеличить">+</button>
+    </div>
+  </header>
+  <main id="viewport" class="viewport" tabindex="0" aria-label="Схема семейного дерева">
+    <div id="board" class="board">
+      <svg id="links" class="links" aria-hidden="true"></svg>
+      <div id="cards" class="cards"></div>
+    </div>
+    <p class="help">Перемещение — перетащите поле · Масштаб — Ctrl + колесо или кнопки</p>
+  </main>
+  <script src="tree-data.js"></script>
+  <script src="viewer.js"></script>
+</body>
+</html>
